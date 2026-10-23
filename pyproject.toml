@@ -1,0 +1,26 @@
+[project]
+name = "bond-analytics"
+version = "0.1.0"
+description = "债券定价、久期、凸性、关键期限久期、票息和骑乘收益"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.12",
+]
+
+[project.optional-dependencies]
+examples = [
+    "akshare>=1.19",
+    "pandas>=2.2",
+    "tabulate>=0.9",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
